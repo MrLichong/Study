@@ -171,13 +171,24 @@ public class ModelHelper {
             return map;
         }
     }
-
-    public static void createModelFromDB(Connection connection, List<String> tables, String modelPath) throws Exception {
-        MybatisGenerator.generateModelAndMapper(connection, tables, modelPath, (String)null, false);
+    public static void createModelFromOracleDB(Connection connection, List<String> tables, String modelPath) throws
+            Exception {
+        MybatisGenerator.generateModelAndMapper(connection, tables, modelPath, (String)null, false,"oracle");
     }
 
-    public static void createHibernateModelFromDB(Connection connection, List<String> tables, String modelPath) throws Exception {
-        MybatisGenerator.generateModelAndMapper(connection, tables, modelPath, (String)null, true);
+    public static void createHibernateModelFromMyOracleDB(Connection connection, List<String> tables, String modelPath)
+            throws Exception {
+        MybatisGenerator.generateModelAndMapper(connection, tables, modelPath, (String)null, true,"oracle");
+    }
+
+    public static void createModelFromMysqlDB(Connection connection, List<String> tables, String modelPath) throws
+            Exception {
+        MybatisGenerator.generateModelAndMapper(connection, tables, modelPath, (String)null, false,"mysql");
+    }
+
+    public static void createHibernateModelFromMySqlDB(Connection connection, List<String> tables, String modelPath)
+            throws Exception {
+        MybatisGenerator.generateModelAndMapper(connection, tables, modelPath, (String)null, true,"mysql");
     }
 
     public static void copyProperties(Object source, Object target) {

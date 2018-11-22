@@ -1,45 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81d4bed4-a414-4ef8-8cf1-45ac2afd9cb5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/date/DateEnhance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/date/DateHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/date/DateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/date/DateType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/date/DateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/date/model/Day.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/date/model/Month.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/date/model/Quarter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/date/model/Week.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/date/model/Year.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/fouraroperationutil/FourArOperations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/model/IModelHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/model/ModelHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/model/ModelService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/model/MybatisGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/model/annotation/CopyProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/model/annotation/SourceProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/model/annotation/TargetProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/parameter/ParameterUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/reflect/ReflectUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/sql/annotation/DBStringValue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/sql/annotation/Ignore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/sql/helper/FiledHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/sql/helper/SqlHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/sql/helper/TableHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/sql/hibernate/annotation/Column.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/sql/hibernate/annotation/Id.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/sql/hibernate/annotation/Table.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/sql/hibernate/annotation/TinyInt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/sql/hibernate/helper/HibernateHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/sql/hibernate/helper/HibernateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/sql/util/MapJavaAndDBColumeType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/sql/util/PrepareSqlAndArgs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/base/sql/util/SqlUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baseutil.iml" beforeDir="false" afterPath="$PROJECT_DIR$/baseutil.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="81d4bed4-a414-4ef8-8cf1-45ac2afd9cb5" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,7 +32,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="260" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
@@ -517,7 +479,17 @@
     <panes>
       <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="baseutil" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baseutil" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -599,15 +571,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542857761642</updated>
-      <workItem from="1542857762966" duration="599000" />
+      <workItem from="1542857762966" duration="608000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="599000" />
+    <option name="totallyTimeSpent" value="608000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="260" y="20" width="1400" height="1000" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -622,7 +594,7 @@
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17857143" />
       <window_info anchor="right" id="Database" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />

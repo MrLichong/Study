@@ -13,10 +13,10 @@ public class MybatisGenerator {
     public static void main(String[] args) throws Exception {
         Connection connection = DB.getConnection();
         List<String> tables = new ArrayList<>();
-        tables.add("users");
+        tables.add("project");
         //List<String> tables = new ArrayList<>();
         //tables.add("sns_posts_pr_group_users");
-        ModelHelper.createModelFromDB(connection, tables, "E:/Java/_电商项目");
+        ModelHelper.createModelFromOracleDB(connection, tables, "E:/Java/testModel");
 
     }
 }

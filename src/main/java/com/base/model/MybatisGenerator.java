@@ -21,6 +21,9 @@ import java.util.Iterator;
 import java.util.List;
 
 public class MybatisGenerator {
+
+    private static final String DB_MYSQL = "mysql";
+    private static final String DB_ORACLE = "oracle";
     public MybatisGenerator() {
     }
 
@@ -37,10 +40,11 @@ public class MybatisGenerator {
         return tables;
     }
 
-    static void generateModelAndMapper(Connection connection, List<String> tables, String modelPath, String daoPath, boolean addSqlHelper) throws Exception {
+    static void generateModelAndMapper(Connection connection, List<String> tables, String modelPath, String daoPath,
+                                       boolean addSqlHelper,String dbType) throws Exception {
         if (modelPath != null && !"".equals(modelPath)) {
             createFileOrDirectoryIfNotExist(modelPath);
-            generateModel(connection, tables, modelPath, addSqlHelper);
+            generateModel(connection, tables, modelPath, addSqlHelper,dbType);
         }
 
         if (daoPath != null && !"".equals(daoPath)) {
@@ -156,14 +160,20 @@ public class MybatisGenerator {
 
     }
 
-    private static void generateModel(Connection connection, List<String> tables, String modelPath, boolean addSqlHelper) throws Exception {
+    private static void generateModel(Connection connection, List<String> tables, String modelPath, boolean
+            addSqlHelper,String dbType) throws Exception {
         Iterator var4 = tables.iterator();
 
         while(var4.hasNext()) {
             String table = (String)var4.next();
             System.out.println(table);
             File file = createJavaFile(table, modelPath, ".java");
-            String sql = "select * from " + table + " limit 1";
+            String sql = "";
+            if (DB_MYSQL.equals(dbType)) {
+                sql = "select * from " + table + " limit 1";
+            } else if (DB_ORACLE.equals(dbType)) {
+                sql = "select * from " + table + " where rownum = 1";
+            }
             Statement st = connection.createStatement();
             ResultSet rs = st.executeQuery(sql);
             ResultSetMetaData rsmd = rs.getMetaData();
