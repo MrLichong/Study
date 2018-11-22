@@ -20,10 +20,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import static com.base.constant.BaseConstant.DB_MYSQL;
+import static com.base.constant.BaseConstant.DB_ORACLE;
+
 public class MybatisGenerator {
 
-    private static final String DB_MYSQL = "mysql";
-    private static final String DB_ORACLE = "oracle";
+
     public MybatisGenerator() {
     }
 

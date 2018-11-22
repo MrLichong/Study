@@ -6,6 +6,7 @@
 package com.base.model;
 
 
+import com.base.constant.BaseConstant;
 import com.base.model.annotation.CopyProperties;
 import com.base.reflect.ReflectUtil;
 import com.base.sql.helper.FiledHelper;
@@ -173,22 +174,22 @@ public class ModelHelper {
     }
     public static void createModelFromOracleDB(Connection connection, List<String> tables, String modelPath) throws
             Exception {
-        MybatisGenerator.generateModelAndMapper(connection, tables, modelPath, (String)null, false,"oracle");
+        MybatisGenerator.generateModelAndMapper(connection, tables, modelPath, (String)null, false,BaseConstant.DB_ORACLE);
     }
 
     public static void createHibernateModelFromMyOracleDB(Connection connection, List<String> tables, String modelPath)
             throws Exception {
-        MybatisGenerator.generateModelAndMapper(connection, tables, modelPath, (String)null, true,"oracle");
+        MybatisGenerator.generateModelAndMapper(connection, tables, modelPath, (String)null, true,BaseConstant.DB_ORACLE);
     }
 
     public static void createModelFromMysqlDB(Connection connection, List<String> tables, String modelPath) throws
             Exception {
-        MybatisGenerator.generateModelAndMapper(connection, tables, modelPath, (String)null, false,"mysql");
+        MybatisGenerator.generateModelAndMapper(connection, tables, modelPath, (String)null, false,BaseConstant.DB_MYSQL);
     }
 
     public static void createHibernateModelFromMySqlDB(Connection connection, List<String> tables, String modelPath)
             throws Exception {
-        MybatisGenerator.generateModelAndMapper(connection, tables, modelPath, (String)null, true,"mysql");
+        MybatisGenerator.generateModelAndMapper(connection, tables, modelPath, (String)null, true,BaseConstant.DB_MYSQL);
     }
 
     public static void copyProperties(Object source, Object target) {
