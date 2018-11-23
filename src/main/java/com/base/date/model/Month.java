@@ -19,7 +19,13 @@ import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * 代表“月”的实体类
+ * @author:LiChong
+ * @date:2018/11/15
+ */
 public class Month {
+
     private Date currentDate;
     private LocalDate localDate;
     private String startDay;
@@ -28,6 +34,9 @@ public class Month {
     private String lastDay;
     private Long lastDay13Time;
     private Long lastDay10Time;
+    /**
+     * 当前月的每一天集合
+     */
     private List<String> days;
     private List<Long> days13Time;
     private List<Long> days10Time;
@@ -39,6 +48,12 @@ public class Month {
         return this.getPreviousMonth((String)null);
     }
 
+    /**
+     * 根据指定日期格式获取上个月month对象，默认格式yyyyMMdd
+     * @param pattern
+     * @return
+     * @throws Exception
+     */
     public Month getPreviousMonth(String pattern) throws Exception {
         if (pattern == null || "".equals(pattern)) {
             pattern = "yyyyMMdd";
@@ -60,6 +75,12 @@ public class Month {
         return this.getNextMonth((String)null);
     }
 
+    /**
+     * 根据指定日期格式获取下个月month对象，默认格式yyyyMMdd
+     * @param pattern
+     * @return
+     * @throws Exception
+     */
     public Month getNextMonth(String pattern) throws Exception {
         if (pattern == null || "".equals(pattern)) {
             pattern = "yyyyMMdd";

@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
 package com.base.date.model;
 
 import com.base.date.DateHelper;
@@ -16,7 +11,13 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
+/**
+ * 代表“天”的实体类
+ * @author:LiChong
+ * @date:2018/11/15
+ */
 public class Day {
+
     private Date currentDate;
     private LocalDate localDate;
     private String date;
@@ -41,6 +42,12 @@ public class Day {
         return this.getNextDay((String)null);
     }
 
+    /**
+     * 根据指定日期格式获取后一天Day对象  默认格式为yyyyMMdd
+     * @param pattern
+     * @return
+     * @throws Exception
+     */
     public Day getNextDay(String pattern) throws Exception {
         if (pattern == null || "".equals(pattern)) {
             pattern = "yyyyMMdd";
@@ -58,6 +65,12 @@ public class Day {
         return day;
     }
 
+    /**
+     * 根据指定日期格式获取前一天Day对象  默认格式为yyyyMMdd
+     * @param pattern
+     * @return
+     * @throws Exception
+     */
     public Day getPreviousDay(String pattern) throws Exception {
         if (pattern == null || "".equals(pattern)) {
             pattern = "yyyyMMdd";
@@ -87,14 +100,22 @@ public class Day {
         this.currentDate = currentDate;
     }
 
+    /**
+     * 获取当前日期为本周的第几天
+     */
     public Integer getDayOfWeek() {
         return this.dayOfWeek;
     }
+
 
     public void setDayOfWeek(Integer dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
     }
 
+    /**
+     * 获取当前日期为本月的第几天
+     * @return
+     */
     public Integer getDayOfMonth() {
         return this.dayOfMonth;
     }
@@ -103,6 +124,10 @@ public class Day {
         this.dayOfMonth = dayOfMonth;
     }
 
+    /**
+     * 获取当前日期为本年的第几天
+     * @return
+     */
     public Integer getDayOfYear() {
         return this.dayOfYear;
     }
@@ -119,6 +144,10 @@ public class Day {
         this.date = date;
     }
 
+    /**
+     * 获取当前日期10位时间戳
+     * @return
+     */
     public Long getDate10Time() {
         return this.date10Time;
     }
@@ -127,6 +156,10 @@ public class Day {
         this.date10Time = date10Time;
     }
 
+    /**
+     * 获取当前日期13位时间戳
+     * @return
+     */
     public Long getDate13Time() {
         return this.date13Time;
     }
