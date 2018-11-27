@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
 package com.base.date;
 
 
@@ -20,8 +15,15 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 日期帮助类
+ *
+ * @author:LiChong
+ * @date:2018/11/15
+ */
 public class DateHelper {
-    public DateHelper() {
+
+    private DateHelper() {
     }
 
     public static DateEnhance getDateEnhance() {
@@ -36,6 +38,12 @@ public class DateHelper {
         return getDateEnhance(new Date(), pattern);
     }
 
+    /**
+     * 获取一个世界增强类
+     * @param date
+     * @param pattern
+     * @return
+     */
     public static DateEnhance getDateEnhance(Date date, String pattern) {
         DateEnhance de = new DateEnhance();
 
@@ -106,6 +114,14 @@ public class DateHelper {
         }
     }
 
+    /**
+     * 创建一季
+     * @param localDate
+     * @param de
+     * @param pattern
+     * @return
+     * @throws Exception
+     */
     private static Quarter buildQuarter(LocalDate localDate, DateEnhance de, String pattern) throws Exception {
         int monthValue = localDate.getMonth().getValue();
         Month month1;
@@ -134,6 +150,13 @@ public class DateHelper {
         }
     }
 
+    /**
+     * 创建一季
+     * @param month1
+     * @param month2
+     * @param month3
+     * @return
+     */
     private static Quarter buildQuarter(Month month1, Month month2, Month month3) {
         String startDay = null;
         Long startDay13Time = null;
@@ -172,6 +195,14 @@ public class DateHelper {
         return quarter;
     }
 
+    /**
+     * 创建一天
+     * @param localDate
+     * @param dateTimeFormatter
+     * @param df
+     * @return
+     * @throws Exception
+     */
     public static Day buildDay(LocalDate localDate, DateTimeFormatter dateTimeFormatter, DateFormat df) throws Exception {
         Day day = new Day();
         String thisDay = localDate.format(dateTimeFormatter);
@@ -186,6 +217,16 @@ public class DateHelper {
         return day;
     }
 
+    /**
+     * 创建一周
+     * @param dateType
+     * @param df
+     * @param localDate
+     * @param pattern
+     * @param dateTimeFormatter
+     * @return
+     * @throws Exception
+     */
     public static Week buildWeek(DateType dateType, DateFormat df, LocalDate localDate, String pattern, DateTimeFormatter dateTimeFormatter) throws Exception {
         Week week = new Week();
         String startDay = DateUtil.getStartDay(dateType, localDate, pattern);
@@ -207,6 +248,16 @@ public class DateHelper {
         return week;
     }
 
+    /**
+     * 创建一月
+     * @param dateType
+     * @param df
+     * @param localDate
+     * @param pattern
+     * @param dateTimeFormatter
+     * @return
+     * @throws Exception
+     */
     public static Month buildMonth(DateType dateType, DateFormat df, LocalDate localDate, String pattern, DateTimeFormatter dateTimeFormatter) throws Exception {
         Month month = new Month();
         String startDay = DateUtil.getStartDay(dateType, localDate, pattern);

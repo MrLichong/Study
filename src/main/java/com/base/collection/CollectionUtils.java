@@ -3,6 +3,7 @@ package com.base.collection;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -104,22 +105,33 @@ public class CollectionUtils {
 	 * @param key
 	 * @return
 	 */
-	public String getParam(Map paramsMap, String key) {
+	public static String getParam(Map paramsMap, String key) {
+		return getParam(paramsMap, key, "");
+	}
+
+	public static String getParam(Map paramsMap, String key,String defaultValue) {
 		if (isEmpty(paramsMap)) {
 			throw new RuntimeException("paramsMap is null or empty");
 		}
 		Object o = paramsMap.get(key);
-		return o == null ? "": o.toString();
+		return o == null ? defaultValue: o.toString();
+	}
+
+	public static <T> T getParam(Map paramsMap, String key,Class<T> clazz){
+		if (isEmpty(paramsMap)) {
+			throw new RuntimeException("paramsMap is null or empty");
+		}
+		Object o = paramsMap.get(key);
+		T t = (T) o;
+		return t ;
 	}
 
 
 
 	public static void main(String[] args) {
-		List<String> list = new ArrayList<String>();
-		list.add("sss");
-		list.add("aaa");
-		list.add("bbb");
-		String s = listToStr(list, ",", true);
-		System.out.println(s);
+		Map map = new HashMap();
+		map.put("111", 222);
+		Integer param = getParam(map, "112", Integer.class);
+		System.out.println(param);
 	}
 }

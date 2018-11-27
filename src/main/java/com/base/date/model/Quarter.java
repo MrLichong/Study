@@ -7,6 +7,12 @@ package com.base.date.model;
 
 import java.util.List;
 
+/**
+ * 代表“季度”的实体类
+ *
+ * @author:LiChong
+ * @date:2018/11/15
+ */
 public class Quarter {
     private String startDay;
     private Long startDay13Time;

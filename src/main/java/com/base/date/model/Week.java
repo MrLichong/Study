@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
 package com.base.date.model;
 
 
@@ -19,6 +14,12 @@ import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * 代表“周”的实体类
+ *
+ * @author:LiChong
+ * @date:2018/11/15
+ */
 public class Week {
     private Date currentDate;
     private LocalDate localDate;

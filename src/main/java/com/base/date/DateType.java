@@ -1,10 +1,12 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
 
 package com.base.date;
 
+/**
+ * 日期类型
+ *
+ * @author:LiChong
+ * @date:2018/11/15
+ */
 public enum DateType {
     THIS_WEEK,
     LAST_WEEK,
@@ -17,7 +19,4 @@ public enum DateType {
     CUSTOM_WEEK,
     CUSTOM_MONTH,
     CUSTOM_YEAR;
-
-    private DateType() {
-    }
 }

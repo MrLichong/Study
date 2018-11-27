@@ -1,7 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
 
 package com.base.date;
 
@@ -10,6 +6,12 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
 
+/**
+ * 日期工具类
+ *
+ * @author:LiChong
+ * @date:2018/11/15
+ */
 public class DateUtil {
     public static final String DEFAULT_PATTERN = "yyyyMMdd";
 
@@ -133,4 +135,9 @@ public class DateUtil {
     public static LocalDate dateToLocalDate(Date date) {
         return LocalDateTime.ofInstant(date.toInstant(), ZoneId.systemDefault()).toLocalDate();
     }
+
+    public static void main(String[] args) {
+		LocalDate localDate = DateUtil.dateToLocalDate(new Date());
+		System.out.println(localDate);
+	}
 }
